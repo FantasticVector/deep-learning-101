@@ -2,3 +2,5 @@ ResNet/data/
 LeNet5/data/
 dataset/
 Pytorch/data/
+GANs/*/data/
+GANs/*/logs/
