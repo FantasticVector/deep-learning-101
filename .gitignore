@@ -5,3 +5,4 @@ Pytorch/data/
 GANs/*/data/
 GANs/*/logs/
 Model Zoo/data/
+data/
