@@ -1,5 +1,5 @@
 import torch
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset, random_split, DataLoader
 import numpy as np
 import torchvision
 import os
@@ -13,11 +13,10 @@ transform = transforms.Compose([
   # transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))
 ])
 data_path = "D:\Courses\ML\deep-learning-101\data\dogs-vs-cats"
-dataset = torchvision.datasets.ImageFolder(root=os.path.join(data_path, 'train'), transform=transform)
-data_loader = DataLoader(dataset, batch_size=32, shuffle=True)
-images, labels = next(iter(data_loader))
 
-for i in range(6):
-  image = images[i].movedim(0, -1)
-  plt.subplot(2, 3, i+1)
-  plt.imshow(image)
+dataset = torchvision.datasets.ImageFolder(root=os.path.join(data_path, 'train'), transform=transform)
+
+train_dataset, test_dataset = random_split(dataset, [0.9, 0.1])
+
+train_loader = DataLoader(test_dataset, batch_size=32, shuffle=True)
+test_loader = DataLoader(test_dataset, batch_size=32, shuffle=True)

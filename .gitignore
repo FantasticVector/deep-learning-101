@@ -1,8 +1,12 @@
-ResNet/data/
-LeNet5/data/
-dataset/
-Pytorch/data/
+# ResNet/data/
+# LeNet5/data/
+# dataset/
+# Pytorch/data/
 GANs/*/data/
 GANs/*/logs/
-Model Zoo/data/
+# Model Zoo/data/
+# data/
+# MLModels/data/
 data/
+*/data/
+*/*/data/
